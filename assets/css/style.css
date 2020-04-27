@@ -3,6 +3,7 @@ body{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  width: fit-content;
 }
 .flex-content{
 flex: 1 0 auto;
@@ -40,6 +41,10 @@ flex: 1 0 auto;
         text-decoration: none;
         letter-spacing: .45rem;
     }
+    .deezer{
+      width:20%;
+      height:auto;
+    }
 
 .navigation  {
   display: flex;
@@ -69,13 +74,17 @@ flex: 1 0 auto;
 
 /* *********** media queries *********** */
 @media all and (max-width: 990px) {
+  .deezer{
+    width:40%;
+    height:auto;
+  }
   .flex-container {
     flex-direction: column;
-            width: max-content;
   }
 
   .logo {
-  margin: 0;
+  margin: 0 auto;
+  display: flex;
 }
 
   .navigation  {
@@ -89,11 +98,16 @@ flex: 1 0 auto;
 @media all and (max-width: 600px) {
 
   .logo {
-    margin: .25em 0;
-    align-self: left; /* align the logo to the left side of 'flex-container' */
+    margin: 0 auto;
+    align-self: center; /* align the logo to the left side of 'flex-container' */
+    display: flex;
+}
+.deezer{
+  width:40%;
+  height:auto;
 }
 .flex-container{
-          width: max-content;
+
 }
   .navigation {
     flex-direction: column;
