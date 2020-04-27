@@ -91,10 +91,12 @@ flex: 1 0 auto;
     margin: .25em 0;
     align-self: left; /* align the logo to the left side of 'flex-container' */
 }
-
+.flex-container{
+          width: max-content;
+}
   .navigation {
     flex-direction: column;
-        width: max-content;
+
   }
 
   .navigation a {
