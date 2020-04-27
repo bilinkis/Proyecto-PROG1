@@ -71,6 +71,7 @@ flex: 1 0 auto;
 @media all and (max-width: 990px) {
   .flex-container {
     flex-direction: column;
+            width: max-content;
   }
 
   .logo {
