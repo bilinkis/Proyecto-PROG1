@@ -3,11 +3,18 @@ body{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-width: fit-content;
  min-width: 0;
 }
 .flex-content{
 flex: 1 0 auto;
+}
+
+.content{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  align-content: center;
+  padding-top: 5em;
 }
 @font-face {
   font-family: Oswald;
@@ -88,11 +95,12 @@ flex: 1 0 auto;
 }
 .navigation-footer li {
   font-family: Oswald;
-  display: block;
+  display: flex;
   padding: 1em 3em 1em 3em;
   color: black;
   font-weight: bold;
   font-size: 20px;
+  flex-wrap:nowrap;
 }
 
 
@@ -128,9 +136,7 @@ flex: 1 0 auto;
 
 /* ****** ****** */
 @media all and (max-width: 600px) {
-  .navigation a {
-    padding:1em;
-  }
+
 
   .logo {
     margin: 0 auto;
@@ -151,7 +157,7 @@ flex: 1 0 auto;
     font-family: Oswald;
     font-size: 5%;
     text-align: center;
-    padding: 10px;
+    padding:1em;
   }
 
   .navigation li:last-of-type a {
@@ -184,4 +190,34 @@ height: auto;
   padding: 15px;
   display: flex;
 
+}
+
+.column{
+  margin:0 auto;
+  padding-bottom: 100px;
+
+}
+.column:hover{
+  -webkit-animation: flip 1s;
+  animation: flip 1s;
+}
+.column img{
+  width:400px;
+  border-radius: 25px;
+}
+.column h3{
+  text-align:center;
+  color:white;
+  font-family: Oswald;
+  text-transform: uppercase;
+  font-size: 35px;
+}
+.title{
+  padding-top: 50px;
+  text-transform: uppercase;
+  font-family: Oswald;
+  text-align: center;
+  color:#1ed761;
+  font-size:75px;
+  font-weight: bold;
 }
