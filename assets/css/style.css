@@ -98,6 +98,9 @@ flex: 1 0 auto;
 
 /* *********** media queries *********** */
 @media all and (max-width: 990px) {
+  .navigation a {
+    padding:1em;
+  }
   .deezer{
     width:40%;
     height:auto;
@@ -125,6 +128,9 @@ flex: 1 0 auto;
 
 /* ****** ****** */
 @media all and (max-width: 600px) {
+  .navigation a {
+    padding:1em;
+  }
 
   .logo {
     margin: 0 auto;
