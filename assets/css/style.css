@@ -135,7 +135,7 @@ flex: 1 0 auto;
 
 
 /* ****** ****** */
-@media all and (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
 
   .logo {
@@ -179,6 +179,13 @@ flex: 1 0 auto;
   .navigation-footer li:last-of-type a {
     border-bottom: none;
   }
+  .content {
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 10px;
+    align-content: center;
+    padding-top: 5em;
+  }
 }
 .img-responsive{
 width:100%;
@@ -197,10 +204,7 @@ height: auto;
   padding-bottom: 100px;
 
 }
-.column:hover{
-  -webkit-animation: flip 1s;
-  animation: flip 1s;
-}
+
 .column img{
   width:400px;
   border-radius: 25px;
@@ -220,4 +224,12 @@ height: auto;
   color:#1ed761;
   font-size:75px;
   font-weight: bold;
+}
+.line{
+  display:block;
+    border:none;
+    color:white;
+    height:1px;
+    background:#1ed761;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#1ed761), to(#000));
 }
