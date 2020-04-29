@@ -1,0 +1,465 @@
+body{
+  background-color: black;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+ min-width: 0;
+}
+.flex-content{
+flex: 1 0 auto;
+}
+
+
+@font-face {
+  font-family: Oswald;
+  src: url(../fonts/Oswald.ttf);
+}
+
+* {padding: 0; margin: 0;}
+.flex-container  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+      background: #1ed761;
+}
+
+
+.logo:hover{
+
+}
+    .logo a {
+      color: rgb(28, 24, 22);
+    }
+
+    .logo, .navigation {
+        list-style: none;
+        text-transform: uppercase;
+    }
+
+    .logo a, .navigation a {
+        text-decoration: none;
+        letter-spacing: .45rem;
+    }
+
+.songs ul{
+display: flex;
+flex-direction: column;
+
+
+}
+.songs li{
+  color: white;
+  font-size: 20px;
+  list-style: none;
+  text-transform: uppercase;
+  font-family: Oswald;
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+}
+.songs img {
+  border-radius: 25px;
+}
+
+
+
+/* *********** media queries *********** */
+@media all and (min-width:1001px){
+  .songs{
+    margin-left: 150px;
+  }
+
+  .deezer{
+    width:40%;
+    height:auto;
+    align-items: center;
+  }
+  .logo {
+    margin: 0 0 0 2em;
+    align-self: left; /* align the logo to the left side of 'flex-container' */
+    display: flex;
+    width: 50%;
+    height: auto;
+}
+
+      .logo a {
+        color: rgb(28, 24, 22);
+      }
+
+      .logo, .navigation {
+          list-style: none;
+          text-transform: uppercase;
+      }
+
+      .logo a, .navigation a {
+          text-decoration: none;
+          letter-spacing: .45rem;
+      }
+  .content{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    align-content: center;
+    padding-top: 5em;
+  }
+  .content-album{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 10px;
+
+    padding-top: 5em;
+
+  }
+  .content-artist{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+
+    padding-top: 5em;
+
+  }
+  .artist-albums{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+
+    padding-top: 5em;
+
+  }
+  #top-albums{
+    width: 300px!important;
+    height: auto;
+  }
+  .artist-songs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    padding-top: 5em;
+  }
+  .navigation  {
+    display: flex;
+
+  }
+
+  .navigation a {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    align-items: center;
+
+  }
+  .navigation a:hover {
+      color:white;
+      -webkit-animation: pulse 1s;
+      animation: pulse 1s;
+  }
+  .navigation li {
+    font-family: Oswald;
+    display: flex;
+    padding: 0.7em 2em 0.7em 2em;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+  }
+  .navigation-footer  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+
+  .navigation-footer a {
+    font-family: Oswald;
+    display: block;
+    padding: 1em 3em 1em 3em;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .navigation-footer li {
+    font-family: Oswald;
+    display: flex;
+    padding: 1em 3em 1em 3em;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    flex-wrap:nowrap;
+    align-items: center;
+  }
+  .title{
+    padding-top: 50px;
+    text-transform: uppercase;
+    font-family: Oswald;
+    text-align: center;
+    color:#1ed761;
+    font-size:75px;
+    font-weight: bold;
+  }
+  .column img{
+    width:400px;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .column h3{
+    text-align:center;
+    color:white;
+    font-family: Oswald;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 30px;
+  }
+  .column h4{
+    text-align:center;
+    color:white;
+    font-family: Oswald;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 25px;
+  }
+  .column h5{
+    text-align:center;
+    color:white;
+    font-family: Oswald;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+}
+
+
+
+@media screen and (min-width: 601px) and (max-width:1000px) {
+
+
+  .logo {
+    margin: 0 auto;
+    align-self: center; /* align the logo to the left side of 'flex-container' */
+    display: flex;
+    width: 50%;
+    height: auto;
+}
+.deezer{
+  width:50%;
+  height:auto;
+  margin: 0 auto;
+}
+
+  .navigation {
+    flex-direction: row;
+    grid-row-gap: 0;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .navigation a {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7em;
+
+  }
+  .navigation a:hover {
+      color:white;
+      -webkit-animation: pulse 1s;
+      animation: pulse 1s;
+  }
+  .navigation li {
+    font-family: Oswald;
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+  .navigation-footer {
+    flex-direction: column;
+
+  }
+
+
+  .navigation-footer li {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    flex-wrap:nowrap;
+    align-items: center;
+  }
+
+  .navigation-footer li:last-of-type a {
+    border-bottom: none;
+  }
+  .content {
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 10px;
+    align-content: center;
+    padding-top: 5em;
+  }
+  .title{
+    padding-top: 50px;
+    text-transform: uppercase;
+    font-family: Oswald;
+    text-align: center;
+    color:#1ed761;
+    font-size:75px;
+    font-weight: bold;
+  }
+  .column img{
+    width:450px;
+    border-radius: 25px;
+  }
+  .column h3{
+    text-align:center;
+    color:white;
+    font-family: Oswald;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+
+
+  .logo {
+    margin: 0 auto;
+    align-self: center; /* align the logo to the left side of 'flex-container' */
+    display: flex;
+    width: 50%;
+    height: auto;
+}
+.deezer{
+  width:50%;
+  height:auto;
+  margin: 0 auto;
+}
+
+  .navigation {
+    flex-direction: row;
+    grid-row-gap: 0;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .navigation a {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7em;
+
+  }
+  .navigation a:hover {
+      color:white;
+      -webkit-animation: pulse 1s;
+      animation: pulse 1s;
+  }
+  .navigation li {
+    font-family: Oswald;
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+  .navigation-footer {
+    flex-direction: column;
+
+  }
+
+  .navigation-footer a {
+    font-family: Oswald;
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .navigation-footer li {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 35px;
+    flex-wrap:nowrap;
+    align-items: center;
+  }
+
+  .navigation-footer li:last-of-type a {
+    border-bottom: none;
+  }
+  .content {
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 10px;
+    align-content: center;
+    padding-top: 5em;
+  }
+  .title{
+    padding-top: 50px;
+    text-transform: uppercase;
+    font-family: Oswald;
+    text-align: center;
+    color:#1ed761;
+    font-size:50px;
+    font-weight: bold;
+  }
+  .column img{
+    width:300px;
+    border-radius: 25px;
+  }
+  .column h3{
+    text-align:center;
+    color:white;
+    font-family: Oswald;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 35px;
+  }
+}
+.img-responsive{
+width:100%;
+height: auto;
+}
+.footer {
+  background-color: #1ed761;
+  flex-shrink: 0;
+  padding: 15px;
+  display: flex;
+}
+.footer li{
+  justify-content: center;
+}
+
+.column{
+  margin:0 auto;
+  padding-bottom: 100px;
+
+}
+
+
+
+
+.line{
+  display:block;
+    border:none;
+    color:white;
+    height:1px;
+    background:#1ed761;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#1ed761), to(#000));
+}

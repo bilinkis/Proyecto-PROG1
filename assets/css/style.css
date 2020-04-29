@@ -8,7 +8,7 @@ body{
 .flex-content{
 flex: 1 0 auto;
 }
-
+a {text-decoration: none;}
 
 @font-face {
   font-family: Oswald;
@@ -46,7 +46,7 @@ flex: 1 0 auto;
 
 
 /* *********** media queries *********** */
-@media all and (min-width:800px) and (max-width:3000px){
+@media all and (min-width:1001px){
   .deezer{
     width:40%;
     height:auto;
@@ -145,12 +145,116 @@ flex: 1 0 auto;
     width:400px;
     border-radius: 25px;
   }
+  .column h3{
+    text-align:center;
+    color:white;
+    font-family: Oswald;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 35px;
+  }
 }
 
 
 
-/* ****** ****** */
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 601px) and (max-width:1000px) {
+
+
+  .logo {
+    margin: 0 auto;
+    align-self: center; /* align the logo to the left side of 'flex-container' */
+    display: flex;
+    width: 50%;
+    height: auto;
+}
+.deezer{
+  width:50%;
+  height:auto;
+  margin: 0 auto;
+}
+
+  .navigation {
+    flex-direction: row;
+    grid-row-gap: 0;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .navigation a {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7em;
+
+  }
+  .navigation a:hover {
+      color:white;
+      -webkit-animation: pulse 1s;
+      animation: pulse 1s;
+  }
+  .navigation li {
+    font-family: Oswald;
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+  .navigation-footer {
+    flex-direction: column;
+
+  }
+
+
+  .navigation-footer li {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    flex-wrap:nowrap;
+    align-items: center;
+  }
+
+  .navigation-footer li:last-of-type a {
+    border-bottom: none;
+  }
+  .content {
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 10px;
+    align-content: center;
+    padding-top: 5em;
+  }
+  .title{
+    padding-top: 50px;
+    text-transform: uppercase;
+    font-family: Oswald;
+    text-align: center;
+    color:#1ed761;
+    font-size:75px;
+    font-weight: bold;
+  }
+  .column img{
+    width:450px;
+    border-radius: 25px;
+  }
+  .column h3{
+    text-align:center;
+    color:white;
+    font-family: Oswald;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
 
 
   .logo {
@@ -244,7 +348,14 @@ flex: 1 0 auto;
     width:300px;
     border-radius: 25px;
   }
-
+  .column h3{
+    text-align:center;
+    color:white;
+    font-family: Oswald;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 35px;
+  }
 }
 .img-responsive{
 width:100%;
@@ -267,13 +378,7 @@ height: auto;
 }
 
 
-.column h3{
-  text-align:center;
-  color:white;
-  font-family: Oswald;
-  text-transform: uppercase;
-  font-size: 35px;
-}
+
 
 .line{
   display:block;
