@@ -9,13 +9,7 @@ body{
 flex: 1 0 auto;
 }
 
-.content{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 10px;
-  align-content: center;
-  padding-top: 5em;
-}
+
 @font-face {
   font-family: Oswald;
   src: url(../fonts/Oswald.ttf);
@@ -29,9 +23,7 @@ flex: 1 0 auto;
       background: #1ed761;
 }
 
-.logo {
-  margin: 0 0 0 .45em;
-}
+
 .logo:hover{
 
 }
@@ -48,116 +40,160 @@ flex: 1 0 auto;
         text-decoration: none;
         letter-spacing: .45rem;
     }
-    .deezer{
-      width:20%;
-      height:auto;
-    }
 
-.navigation  {
-  display: flex;
 
-}
 
-.navigation a {
-  font-family: Oswald;
-  display: flex;
-  padding: 1em 3em 1em 3em;
-  color: black;
-  font-weight: bold;
-  font-size: 25px;
-  align-items: center;
-
-}
-.navigation a:hover {
-    color:white;
-    -webkit-animation: pulse 1s;
-    animation: pulse 1s;
-}
-.navigation li {
-  font-family: Oswald;
-  display: block;
-  padding: 1em 3em 1em 3em;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
-}
-.navigation-footer  {
-  display: flex;
-}
-
-.navigation-footer a {
-  font-family: Oswald;
-  display: block;
-  padding: 1em 3em 1em 3em;
-  color: black;
-  font-weight: bold;
-  font-size: 25px;
-}
-.navigation-footer li {
-  font-family: Oswald;
-  display: flex;
-  padding: 1em 3em 1em 3em;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
-  flex-wrap:nowrap;
-}
 
 
 /* *********** media queries *********** */
-@media all and (max-width: 990px) {
-  .navigation a {
-    padding:1em;
-  }
+@media all and (min-width:800px) and (max-width:3000px){
   .deezer{
     width:40%;
     height:auto;
+    align-items: center;
   }
-  .flex-container {
-    flex-direction: column;
-    background-color: #1ed761;
-  }
-
   .logo {
-  margin: 0 auto;
-  display: flex;
+    margin: 0 0 0 2em;
+    align-self: left; /* align the logo to the left side of 'flex-container' */
+    display: flex;
+    width: 50%;
+    height: auto;
 }
 
+      .logo a {
+        color: rgb(28, 24, 22);
+      }
+
+      .logo, .navigation {
+          list-style: none;
+          text-transform: uppercase;
+      }
+
+      .logo a, .navigation a {
+          text-decoration: none;
+          letter-spacing: .45rem;
+      }
+  .content{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    align-content: center;
+    padding-top: 5em;
+  }
   .navigation  {
-    width: 100%;
-    justify-content: space-around;
+    display: flex;
+
+  }
+
+  .navigation a {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    align-items: center;
+
+  }
+  .navigation a:hover {
+      color:white;
+      -webkit-animation: pulse 1s;
+      animation: pulse 1s;
+  }
+  .navigation li {
+    font-family: Oswald;
+    display: flex;
+    padding: 0.7em 2em 0.7em 2em;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
   }
   .navigation-footer  {
-    width: 100%;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+
+  .navigation-footer a {
+    font-family: Oswald;
+    display: block;
+    padding: 1em 3em 1em 3em;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .navigation-footer li {
+    font-family: Oswald;
+    display: flex;
+    padding: 1em 3em 1em 3em;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    flex-wrap:nowrap;
+    align-items: center;
+  }
+  .title{
+    padding-top: 50px;
+    text-transform: uppercase;
+    font-family: Oswald;
+    text-align: center;
+    color:#1ed761;
+    font-size:75px;
+    font-weight: bold;
+  }
+  .column img{
+    width:400px;
+    border-radius: 25px;
   }
 }
+
 
 
 /* ****** ****** */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
 
   .logo {
     margin: 0 auto;
     align-self: center; /* align the logo to the left side of 'flex-container' */
     display: flex;
+    width: 50%;
+    height: auto;
 }
 .deezer{
-  width:20%;
+  width:50%;
   height:auto;
+  margin: 0 auto;
 }
 
   .navigation {
-    flex-direction: column;
-
+    flex-direction: row;
+    grid-row-gap: 0;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 
   .navigation a {
     font-family: Oswald;
-    font-size: 5%;
-    text-align: center;
-    padding:1em;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7em;
+
+  }
+  .navigation a:hover {
+      color:white;
+      -webkit-animation: pulse 1s;
+      animation: pulse 1s;
+  }
+  .navigation li {
+    font-family: Oswald;
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
   }
 
   .navigation li:last-of-type a {
@@ -170,10 +206,19 @@ flex: 1 0 auto;
 
   .navigation-footer a {
     font-family: Oswald;
-    font-size: 5%;
-    text-align: center;
-    padding: 10px;
-
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .navigation-footer li {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 35px;
+    flex-wrap:nowrap;
+    align-items: center;
   }
 
   .navigation-footer li:last-of-type a {
@@ -186,6 +231,20 @@ flex: 1 0 auto;
     align-content: center;
     padding-top: 5em;
   }
+  .title{
+    padding-top: 50px;
+    text-transform: uppercase;
+    font-family: Oswald;
+    text-align: center;
+    color:#1ed761;
+    font-size:50px;
+    font-weight: bold;
+  }
+  .column img{
+    width:300px;
+    border-radius: 25px;
+  }
+
 }
 .img-responsive{
 width:100%;
@@ -196,7 +255,9 @@ height: auto;
   flex-shrink: 0;
   padding: 15px;
   display: flex;
-
+}
+.footer li{
+  justify-content: center;
 }
 
 .column{
@@ -205,10 +266,7 @@ height: auto;
 
 }
 
-.column img{
-  width:400px;
-  border-radius: 25px;
-}
+
 .column h3{
   text-align:center;
   color:white;
@@ -216,15 +274,7 @@ height: auto;
   text-transform: uppercase;
   font-size: 35px;
 }
-.title{
-  padding-top: 50px;
-  text-transform: uppercase;
-  font-family: Oswald;
-  text-align: center;
-  color:#1ed761;
-  font-size:75px;
-  font-weight: bold;
-}
+
 .line{
   display:block;
     border:none;
