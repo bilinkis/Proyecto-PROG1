@@ -394,6 +394,13 @@ flex-direction: column;
     margin:0 auto;
     display: block;
   }
+  .content-playlist{
+    display: grid;
+    grid-template-row: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    padding-top: 5em;
+    margin:0 auto;
+  }
 }
 @media screen and (max-width: 600px) {
 
@@ -552,6 +559,13 @@ flex-direction: column;
   #top-albums{
     margin:0 auto;
     display: block;
+  }
+  .content-playlist{
+    display: grid;
+    grid-template-row: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    padding-top: 5em;
+    margin: 0 auto;
   }
 }
 .img-responsive{
