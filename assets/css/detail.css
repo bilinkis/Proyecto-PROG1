@@ -396,7 +396,7 @@ flex-direction: column;
   }
   .content-playlist{
     display: grid;
-    grid-template-row: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 20px;
     padding-top: 5em;
     margin:0 auto;
@@ -561,7 +561,11 @@ flex-direction: column;
     display: block;
   }
   .content-playlist{
-    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    padding-top: 5em;
+    margin:0 auto;
   }
 }
 .img-responsive{
