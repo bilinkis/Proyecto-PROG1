@@ -1,5 +1,5 @@
 body{
-  background-color: black;
+  background-color: black!important;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -8,7 +8,7 @@ body{
 .flex-content{
 flex: 1 0 auto;
 }
-a {text-decoration: none;}
+a {text-decoration: none!important;}
 
 @font-face {
   font-family: Oswald;
@@ -47,8 +47,29 @@ a {text-decoration: none;}
 
 /* *********** media queries *********** */
 @media all and (min-width:1001px){
+  .footer-rows{
+    display: grid;
+    flex-direction: row;
+    grid-row-gap: 0;
+    grid-template-rows:;
+
+  }
+  #carouselMusic{
+    padding-top: 5%;
+    width: 40%;
+    height:auto;
+    margin: 0 auto;
+    display: block;
+  }
+  #search{
+    padding-top: 5%;
+    width: 40%;
+    height:auto;
+    margin: 0 auto;
+    display: block;
+  }
   .deezer{
-    width:40%;
+    width:100%;
     height:auto;
     align-items: center;
   }
@@ -120,9 +141,32 @@ a {text-decoration: none;}
     padding: 1em 3em 1em 3em;
     color: black;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 40px;
   }
   .navigation-footer li {
+    font-family: Oswald;
+    display: flex;
+    padding: 1em 3em 1em 3em;
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    flex-wrap:nowrap;
+    align-items: center;
+  }
+  .navigation-footer-social  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+  .navigation-footer-social a {
+    font-family: Oswald;
+    display: block;
+    padding: 1em 3em 1em 3em;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .navigation-footer-social li {
     font-family: Oswald;
     display: flex;
     padding: 1em 3em 1em 3em;
@@ -142,8 +186,10 @@ a {text-decoration: none;}
     font-weight: bold;
   }
   .column img{
-    width:90%;
+    width:70%;
     border-radius: 25px;
+    margin:0 auto;
+    display: block;
   }
   .column h3{
     text-align:center;
@@ -159,7 +205,20 @@ a {text-decoration: none;}
 
 @media screen and (min-width: 601px) and (max-width:1000px) {
 
-
+  #carouselMusic{
+    padding-top: 5%;
+    width: 50%;
+    height:auto;
+    margin: 0 auto;
+    display: block;
+  }
+  #search{
+    padding-top: 5%;
+    width: 50%;
+    height:auto;
+    margin: 0 auto;
+    display: block;
+  }
   .logo {
     margin: 0 auto;
     align-self: center; /* align the logo to the left side of 'flex-container' */
@@ -256,7 +315,20 @@ a {text-decoration: none;}
 }
 @media screen and (max-width: 600px) {
 
-
+  #carouselMusic{
+    padding-top: 5%;
+    width: 70%;
+    height:auto;
+    margin: 0 auto;
+    display: block;
+  }
+  #search{
+    padding-top: 5%;
+    width: 70%;
+    height:auto;
+    margin: 0 auto;
+    display: block;
+  }
   .logo {
     margin: 0 auto;
     align-self: center; /* align the logo to the left side of 'flex-container' */
