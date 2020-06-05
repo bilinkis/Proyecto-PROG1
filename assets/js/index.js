@@ -63,5 +63,4 @@ function carrousel(){
   document.getElementById("nameCarrousel2").innerHTML = datos.albums.data[0].title;
   document.getElementById("nameCarrousel3").innerHTML = datos.artists.data[0].name;
 
-
 }
