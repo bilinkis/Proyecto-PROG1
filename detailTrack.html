@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <script src="https://kit.fontawesome.com/b29222e6af.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <script src="assets/js/wow.min.js"></script>
+                <script>
+                new WOW().init();
+                </script>
+  <title>ABP Music</title>
+</head>
+
+<body class="flexbox-site" onload="detailTrack()">
+  <main class="flex-content">
+    <div class="flex-container">
+
+      <ul class="navigation">
+        <li><a href="index.html"><img src="assets/img/logo.png" class="logo" /></a></li>
+        <li><a href="index.html">Home&nbsp;<i class="fas fa-home"></i></a></li>
+        <li><a href="playlist.html" target="_blank">Playlists&nbsp;<i class="fas fa-headphones"></i></a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="column"></div>
+      <div class="column">
+        <img id="cover" src="./assets/img/let-me-know.jpg" />
+        <h3 id="title">Let Me Know</h3>
+        <h4 id="duration">0:00</h4>
+        <a href="#" id="trackArtistURL"><h4 id="artist">No Wyld</h4></a>
+        <a href="#" id="trackAlbumURL"><h4 id="album">Ascension EP (2015)</h4></a>
+<br><br>
+        <div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=3135556" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="100%" data-height="90px"></div>
+        </div>
+        <div class="column"></div>
+      </div>
+  </main>
+  <footer class="footer">
+
+    <ul class="navigation-footer">
+      <li>Bautista Abella</li>
+      <li>Nicolás Bilinkis</li>
+      <li>Consuelo Perrone</li>
+      <li><img src="assets/img/deezer.png" class="deezer" /></li>
+    </ul>
+
+
+
+<div id="dz-root"></div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+<script>
+DZ.init({
+appId  : '418262',
+channelUrl : 'https://bilinkis.github.io/channel.html'
+});
+</script>
+<script src="./assets/js/detailtrack.js"></script>
+  </footer>
+</body>
+
+</html>

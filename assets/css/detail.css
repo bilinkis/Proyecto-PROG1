@@ -131,10 +131,10 @@ flex-direction: column;
     padding-top: 5em;
 
   }
-  #top-albums{
-    width: 300px!important;
-    height: auto;
-  }
+.top-albums{
+  width:100%;
+  height: auto;
+}
   .artist-songs{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -203,7 +203,7 @@ flex-direction: column;
     font-weight: bold;
   }
   .column img{
-    width:400px;
+    width:100%;
     border-radius: 25px;
     display: block;
     margin: 0 auto;
