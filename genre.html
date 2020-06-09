@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
   <script src="https://kit.fontawesome.com/b29222e6af.js" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +21,7 @@
   <title>ABP Music</title>
 </head>
 
-<body class="flexbox-site" onload="detailArtist()">
+<body class="flexbox-site" onload="detailGenre()">
   <div id="loading" class="box">
     <div class="b b1"></div>
     <div class="b b2"></div>
@@ -42,6 +41,7 @@
         <div class="dropdown-menu" id="drop" aria-labelledby="navbarDropdownMenuLink">
         </div>
       </li>
+
       </ul>
     </div>
     <div class="content-artist">
@@ -50,42 +50,15 @@
       </div>
       <div class="column">
         <img id="cover" src="./assets/img/duki.jpg" style="border-radius:100%"/>
-        <h3 id="artist">Duki</h3>
-        <h4 id="fans"></h4>
+        <h3 id="genero">Duki</h3>
+
 </div>
 <div class="column">
   </div>
   </div>
   <span class="line"></span>
-  <h2 class="title">Top Albums</h2>
-  <div class="artist-albums">
-    <div class="column">
-      <a id="urlAlbums1" href="#" >
-      <img id='imgAlbums1' class="top-albums" src="assets/img/albums/luna.jpg"alt="" />
-      <h3 id='nameAlbums1'>Luna</h3>
-    </a>
-    </div>
-    <div class="column">
-      <a id="urlAlbums2" href="#" >
-      <img id='imgAlbums2' class="top-albums" src="assets/img/albums/ssj.jpg" alt="" />
-      <h3 id='nameAlbums2'>Super Sangre Joven</h3>
-    </a>
-    </div>
-    <div class="column">
-      <a id="urlAlbums3" href="#" >
-      <img id='imgAlbums3' class="top-albums" src="assets/img/albums/goteo.jpg" alt="" />
-      <h3 id='nameAlbums3'>Goteo</h3>
-    </a>
-    </div>
-    <div class="column">
-      <a id="urlAlbums4" href="#" >
-      <img id='imgAlbums4' class="top-albums" src="assets/img/albums/hielo.png" alt="" />
-      <h3 id='nameAlbums4'>H.I.E.L.O</h3>
-    </a>
-    </div>
-  </div>
-  <span class="line"></span>
-  <h2 class="title">Top Tracks</h2>
+
+  <h2 class="title">Top 10 Artists</h2>
   <div class="artist-songs">
 
 <div class="column">
@@ -124,6 +97,44 @@
 
 </div>
   </div>
+  <div class="artist-songs">
+
+<div class="column">
+  <a id="urlTracks6" href="#" >
+  <img id='imgTracks6' class="top-albums" src="assets/img/songs/hablamosmañana.jpeg" alt="" />
+  <h3 id='nameTracks6'>Hablamos Mañana</h3>
+</a>
+</div>
+<div class="column">
+  <a id="urlTracks7" href="#" >
+  <img id='imgTracks7' class="top-albums" src="assets/img/albums/goteo.jpg" alt="" />
+  <h3 id='nameTracks7'>Goteo - Remix</h3>
+</a>
+
+</div>
+<div class="column">
+  <a id="urlTracks8" href="#" >
+  <img id='imgTracks8' class="top-albums" src="assets/img/albums/hielo.png" alt="" />
+  <h3 id='nameTracks8'>H.I.E.L.O</h3>
+</a>
+
+</div>
+<div class="column">
+  <a id="urlTracks9" href="#" >
+  <img id='imgTracks9' class="top-albums" src="assets/img/albums/ssj.jpg" alt="" />
+  <h3 id='nameTracks9'>Goteo</h3>
+</a>
+
+</div>
+<div class="column">
+  <a id="urlTracks10" href="#" >
+  <img id='imgTracks10' class="top-albums" src="assets/img/songs/loca.jpeg" alt="" />
+  <h3 id='nameTracks10'>Loca - Remix</h3>
+</a>
+
+
+</div>
+  </div>
       <!-- <div class="songs">
         <ul>
           <li><img src="assets/img/songs/quierovolver.jpg" width="100px" height="auto" />&nbsp;&nbsp;Quiero volver</li>
@@ -153,37 +164,37 @@
   </main>
   <footer class="footer">
     <div class="footer-rows">
-<div>
+  <div>
     <ul class="navigation-footer">
       <li>Bautista Abella</li>
       <li>Nicolás Bilinkis</li>
       <li>Consuelo Perrone</li>
       <li><img src="assets/img/deezer.png" class="deezer" /></li>
     </ul>
-</div>
-<div>
+  </div>
+  <div>
     <ul class="navigation-footer-social">
       <li><a href="#"><i class="fab fa-facebook"></i>&nbsp;ABP Music</a></li>
       <li><a href="#"><i class="fab fa-twitter"></i>&nbsp;@ABPMusic</a></li>
       <li><a href="#"><i class="fab fa-instagram"></i>&nbsp;@ABPMusic</a></li>
 
     </ul>
-</div>
-</div>
+  </div>
+  </div>
     <div id="dz-root"></div>
     <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
     <script>
-	DZ.init({
-		appId  : '418262',
-		channelUrl : 'https://bilinkis.github.io/channel.html'
-	});
-</script>
+  DZ.init({
+    appId  : '418262',
+    channelUrl : 'https://bilinkis.github.io/channel.html'
+  });
+  </script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-    <script src="./assets/js/detailartist.js" defer></script>
+    <script src="./assets/js/detailgenre.js" defer></script>
   </footer>
 </body>
 

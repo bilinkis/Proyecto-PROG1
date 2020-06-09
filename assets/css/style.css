@@ -46,14 +46,8 @@ a {text-decoration: none!important;}
 
 
 /* *********** media queries *********** */
-@media all and (min-width:1001px){
-  .footer-rows{
-    display: grid;
-    flex-direction: row;
-    grid-row-gap: 0;
-    grid-template-rows:;
+@media all and (min-width:1201px){
 
-  }
   #carouselMusic{
     padding-top: 5%;
     width: 40%;
@@ -116,9 +110,8 @@ a {text-decoration: none!important;}
 
   }
   .navigation a:hover {
-      color:white;
-      -webkit-animation: pulse 1s;
-      animation: pulse 1s;
+      color:black;
+
   }
   .navigation li {
     font-family: Oswald;
@@ -138,7 +131,7 @@ a {text-decoration: none!important;}
   .navigation-footer a {
     font-family: Oswald;
     display: block;
-    padding: 1em 3em 1em 3em;
+    padding: 1em 1em 1em 1em;
     color: black;
     font-weight: bold;
     font-size: 40px;
@@ -146,7 +139,7 @@ a {text-decoration: none!important;}
   .navigation-footer li {
     font-family: Oswald;
     display: flex;
-    padding: 1em 3em 1em 3em;
+    padding: 1em 1em 1em 1em;
     color: black;
     font-weight: bold;
     font-size: 50px;
@@ -203,7 +196,7 @@ a {text-decoration: none!important;}
 
 
 
-@media screen and (min-width: 601px) and (max-width:1000px) {
+@media screen and (min-width: 601px) and (max-width:1200px) {
 
   #carouselMusic{
     padding-top: 5%;
@@ -284,6 +277,25 @@ a {text-decoration: none!important;}
   .navigation-footer li:last-of-type a {
     border-bottom: none;
   }
+  .navigation-footer-social {
+    flex-direction: column;
+
+  }
+
+
+  .navigation-footer-social li {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    flex-wrap:nowrap;
+    align-items: center;
+  }
+
+  .navigation-footer-social li:last-of-type a {
+    border-bottom: none;
+  }
   .content {
     display:grid;
     grid-template-rows: 1fr;
@@ -337,7 +349,7 @@ a {text-decoration: none!important;}
     height: auto;
 }
 .deezer{
-  width:50%;
+  width:20%;
   height:auto;
   margin: 0 auto;
 }
@@ -400,6 +412,32 @@ a {text-decoration: none!important;}
   .navigation-footer li:last-of-type a {
     border-bottom: none;
   }
+  .navigation-footer-social {
+    flex-direction: column;
+
+  }
+
+  .navigation-footer-social a {
+    font-family: Oswald;
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .navigation-footer-social li {
+    font-family: Oswald;
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 35px;
+    flex-wrap:nowrap;
+    align-items: center;
+  }
+
+  .navigation-footer li:last-of-type a {
+    border-bottom: none;
+  }
+
   .content {
     display:grid;
     grid-template-rows: 1fr;

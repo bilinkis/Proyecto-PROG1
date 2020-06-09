@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/loading.css">
   <script src="https://kit.fontawesome.com/b29222e6af.js" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,14 +22,26 @@
   <title>ABP Music</title>
 </head>
 
-<body class="flexbox-site" onload="home()">
-  <main class="flex-content">
+<body class="flexbox-site"onload="home()">
+  <div id="loading" class="box">
+    <div class="b b1"></div>
+    <div class="b b2"></div>
+    <div class="b b3"></div>
+    <div class="b b4"></div>
+  </div>
+  <main class="flex-content" id="body" style="display:none;">
     <div class="flex-container">
 
       <ul class="navigation">
         <li><a href="#"><img src="assets/img/logo.png" class="logo" /></a></li>
         <li><a href="#">Home&nbsp;<i class="fas fa-home"></i></a></li>
-        <li><a href="playlist.html" >Playlists&nbsp;<i class="fas fa-headphones"></i></a></li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Genres
+        </a>
+        <div class="dropdown-menu" id="drop" aria-labelledby="navbarDropdownMenuLink">
+        </div>
+      </li>
 
       </ul>
     </div>
@@ -181,7 +194,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/index.js" defer></script>
   </footer>
 </body>
 

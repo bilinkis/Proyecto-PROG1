@@ -156,9 +156,8 @@ flex-direction: column;
 
   }
   .navigation a:hover {
-      color:white;
-      -webkit-animation: pulse 1s;
-      animation: pulse 1s;
+      color:black;
+
   }
   .navigation li {
     font-family: Oswald;
