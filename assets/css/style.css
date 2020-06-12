@@ -315,6 +315,8 @@ a {text-decoration: none!important;}
   .column img{
     width:450px;
     border-radius: 25px;
+    display:block;
+    margin: 0 auto;
   }
   .column h3{
     text-align:center;
@@ -457,6 +459,8 @@ a {text-decoration: none!important;}
   .column img{
     width:300px;
     border-radius: 25px;
+    display:block;
+    margin: 0 auto;
   }
   .column h3{
     text-align:center;
