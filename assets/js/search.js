@@ -2,6 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let name = urlParams.get('query');
 let datos;
+let radios;
 console.log(name);
 function detailTrack (){
 
@@ -36,3 +37,30 @@ function detail(){
     }
   }());
 }
+function radios(){
+  var drop = document.getElementById('dropRadios');
+  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio', {output:'json',limit:15}, function (response){
+    radios=response;
+    console.log(radios.data);
+    for(let i=0;i<15;i++){
+    //  console.log(genders.data[i].name);
+    //  dropdown.innerHTML = "<a class='dropdown-item' href='./genre.html?id='+'>"+genders.data[i].name+"</a>"
+let tag = document.createElement("a");
+let link = document.createTextNode(radios.data[i].title);
+tag.appendChild(link);
+tag.title=radios.data[i].title;
+tag.href = "./radio.html?id="+radios.data[i].id;
+tag.class="dropdown-item";
+
+drop.appendChild(tag);
+//tag.innerHTML = "class='dropdown-item' href='./genre.html?id='+'>"+genders.data[i].name+"</a>";
+
+    }
+
+
+
+
+
+});
+}
+radios();

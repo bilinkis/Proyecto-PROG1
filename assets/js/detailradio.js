@@ -2,27 +2,30 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get('id');
 let datos;
-let datosArtists;
+let datosTracks;
 let body = document.getElementById("body");
 let loading = document.getElementById("loading");
 console.log(id);
 
 function detailGenre (){
 
-  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/'+id, function (response){
+  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio/'+id, function (response){
     console.log(response);
     datos = response;
 
-genreArtists();
+});
+detailTrack();
+}
+
+function detailTrack(){
+  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio/'+id+'/tracks', function (response){
+    console.log(response);
+    datosTracks = response;
+genders();
 });
 }
 
-function genreArtists(){
-  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/'+id+'/artists', function (response){
-    console.log(response);
-    datosArtists = response;
-    genders();
-});
+
 function genders(){
   var dropdown = document.getElementById('drop');
   $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre', {output:'json'}, function (response){
@@ -46,46 +49,45 @@ dropdown.appendChild(tag);
 
 
 
-
+radio();
 
 });
-genre();
 }
 
-}
-function genre(){
+
+function radio(){
   document.getElementById("cover").src=datos.picture_xl;
-  document.getElementById("genero").innerHTML=datos.name;
-  document.getElementById('imgTracks1').src = datosArtists.data[0].picture_xl;
-  document.getElementById('nameTracks1').innerHTML = datosArtists.data[0].name;
-  document.getElementById('urlTracks1').href = 'detailArtist.html?id='+datosArtists.data[0].id;
-  document.getElementById('imgTracks2').src = datosArtists.data[1].picture_xl;
-  document.getElementById('nameTracks2').innerHTML = datosArtists.data[1].name;
-  document.getElementById('urlTracks2').href = 'detailArtist.html?id='+datosArtists.data[1].id;
-  document.getElementById('imgTracks3').src = datosArtists.data[2].picture_xl;
-  document.getElementById('nameTracks3').innerHTML = datosArtists.data[2].name;
-  document.getElementById('urlTracks3').href = 'detailArtist.html?id='+datosArtists.data[2].id;
-  document.getElementById('imgTracks4').src = datosArtists.data[3].picture_xl;
-  document.getElementById('nameTracks4').innerHTML = datosArtists.data[3].name;
-  document.getElementById('urlTracks4').href = 'detailArtist.html?id='+datosArtists.data[3].id;
-  document.getElementById('imgTracks5').src = datosArtists.data[4].picture_xl;
-  document.getElementById('nameTracks5').innerHTML = datosArtists.data[4].name;
-  document.getElementById('urlTracks5').href = 'detailArtist.html?id='+datosArtists.data[4].id;
-  document.getElementById('imgTracks6').src = datosArtists.data[5].picture_xl;
-  document.getElementById('nameTracks6').innerHTML = datosArtists.data[5].name;
-  document.getElementById('urlTracks6').href = 'detailArtist.html?id='+datosArtists.data[5].id;
-  document.getElementById('imgTracks7').src = datosArtists.data[6].picture_xl;
-  document.getElementById('nameTracks7').innerHTML = datosArtists.data[6].name;
-  document.getElementById('urlTracks7').href = 'detailArtist.html?id='+datosArtists.data[6].id;
-  document.getElementById('imgTracks8').src = datosArtists.data[7].picture_xl;
-  document.getElementById('nameTracks8').innerHTML = datosArtists.data[7].name;
-  document.getElementById('urlTracks8').href = 'detailArtist.html?id='+datosArtists.data[7].id;
-  document.getElementById('imgTracks9').src = datosArtists.data[8].picture_xl;
-  document.getElementById('nameTracks9').innerHTML = datosArtists.data[8].name;
-  document.getElementById('urlTracks9').href = 'detailArtist.html?id='+datosArtists.data[8].id;
-  document.getElementById('imgTracks10').src = datosArtists.data[9].picture_xl;
-  document.getElementById('nameTracks10').innerHTML = datosArtists.data[9].name;
-  document.getElementById('urlTracks10').href = 'detailArtist.html?id='+datosArtists.data[9].id;
+  document.getElementById("genero").innerHTML=datos.title;
+  document.getElementById('imgTracks1').src = datosTracks.data[0].album.cover_xl;
+  document.getElementById('nameTracks1').innerHTML = datosTracks.data[0].title;
+  document.getElementById('urlTracks1').href = 'detailTrack.html?id='+datosTracks.data[0].id;
+  document.getElementById('imgTracks2').src = datosTracks.data[1].album.cover_xl;
+  document.getElementById('nameTracks2').innerHTML = datosTracks.data[1].title;
+  document.getElementById('urlTracks2').href = 'detailTrack.html?id='+datosTracks.data[1].id;
+  document.getElementById('imgTracks3').src = datosTracks.data[2].album.cover_xl;
+  document.getElementById('nameTracks3').innerHTML = datosTracks.data[2].title;
+  document.getElementById('urlTracks3').href = 'detailTrack.html?id='+datosTracks.data[2].id;
+  document.getElementById('imgTracks4').src = datosTracks.data[3].album.cover_xl;
+  document.getElementById('nameTracks4').innerHTML = datosTracks.data[3].title;
+  document.getElementById('urlTracks4').href = 'detailTrack.html?id='+datosTracks.data[3].id;
+  document.getElementById('imgTracks5').src = datosTracks.data[4].album.cover_xl;
+  document.getElementById('nameTracks5').innerHTML = datosTracks.data[4].title;
+  document.getElementById('urlTracks5').href = 'detailTrack.html?id='+datosTracks.data[4].id;
+  document.getElementById('imgTracks6').src = datosTracks.data[5].album.cover_xl;
+  document.getElementById('nameTracks6').innerHTML = datosTracks.data[5].title;
+  document.getElementById('urlTracks6').href = 'detailTrack.html?id='+datosTracks.data[5].id;
+  document.getElementById('imgTracks7').src = datosTracks.data[6].album.cover_xl;
+  document.getElementById('nameTracks7').innerHTML = datosTracks.data[6].title;
+  document.getElementById('urlTracks7').href = 'detailTrack.html?id='+datosTracks.data[6].id;
+  document.getElementById('imgTracks8').src = datosTracks.data[7].album.cover_xl;
+  document.getElementById('nameTracks8').innerHTML = datosTracks.data[7].title;
+  document.getElementById('urlTracks8').href = 'detailTrack.html?id='+datosTracks.data[7].id;
+  document.getElementById('imgTracks9').src = datosTracks.data[8].album.cover_xl;
+  document.getElementById('nameTracks9').innerHTML = datosTracks.data[8].title;
+  document.getElementById('urlTracks9').href = 'detailTrack.html?id='+datosTracks.data[8].id;
+  document.getElementById('imgTracks10').src = datosTracks.data[9].album.cover_xl;
+  document.getElementById('nameTracks10').innerHTML = datosTracks.data[9].title;
+  document.getElementById('urlTracks10').href = 'detailTrack.html?id='+datosTracks.data[9].id;
 
   body.style.display="block";
   loading.style.display="none";
