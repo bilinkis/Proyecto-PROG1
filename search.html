@@ -4,9 +4,10 @@
 <head>
   <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/detail.css">
-
+<link rel="stylesheet" href="assets/css/loading.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/b29222e6af.js" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,13 +22,32 @@
 </head>
 
 <body class="flexbox-site" onload="detailTrack()">
-  <main class="flex-content">
+  <div id="loading" class="box">
+    <div class="b b1"></div>
+    <div class="b b2"></div>
+    <div class="b b3"></div>
+    <div class="b b4"></div>
+  </div>
+  <main class="flex-content" id="body" style="display:none;">
     <div class="flex-container">
 
       <ul class="navigation">
         <li><a href="index.html"><img src="assets/img/logo.png" class="logo" /></a></li>
         <li><a href="index.html">Home&nbsp;<i class="fas fa-home"></i></a></li>
-        <li><a href="playlist.html" target="_blank">Playlists&nbsp;<i class="fas fa-headphones"></i></a></li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Genres
+        </a>
+        <div class="dropdown-menu" id="drop" aria-labelledby="navbarDropdownMenuLink">
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Radios
+      </a>
+      <div class="dropdown-menu" id="dropRadios" aria-labelledby="navbarDropdownMenuLink">
+      </div>
+    </li>
       </ul>
     </div>
     <div class="content">
@@ -58,6 +78,8 @@
 <div id="dz-root"></div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
 DZ.init({
 appId  : '418262',

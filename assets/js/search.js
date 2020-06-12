@@ -2,7 +2,6 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let name = urlParams.get('query');
 let datos;
-let radios;
 console.log(name);
 function detailTrack (){
 
@@ -36,6 +35,34 @@ function detail(){
       w[i].appendChild(el);
     }
   }());
+  genders();
+}
+function genders(){
+  var dropdown = document.getElementById('drop');
+  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre', {output:'json'}, function (response){
+    genders=response;
+    console.log(genders.data);
+
+    for(let i=0;i<genders.data.length;i++){
+    //  console.log(genders.data[i].name);
+    //  dropdown.innerHTML = "<a class='dropdown-item' href='./genre.html?id='+'>"+genders.data[i].name+"</a>"
+let tag = document.createElement("a");
+let link = document.createTextNode(genders.data[i].name);
+tag.appendChild(link);
+tag.title=genders.data[i].name;
+tag.href = "./genre.html?id="+genders.data[i].id;
+tag.class="dropdown-item";
+
+dropdown.appendChild(tag);
+//tag.innerHTML = "class='dropdown-item' href='./genre.html?id='+'>"+genders.data[i].name+"</a>";
+
+    }
+
+
+
+radios();
+
+});
 }
 function radios(){
   var drop = document.getElementById('dropRadios');
@@ -62,5 +89,6 @@ drop.appendChild(tag);
 
 
 });
+document.getElementById("body").style="display:block;";
+document.getElementById("loading").style="display:none;";
 }
-radios();
