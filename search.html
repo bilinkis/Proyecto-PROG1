@@ -3,7 +3,6 @@
 
 <head>
   <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/detail.css">
 <link rel="stylesheet" href="assets/css/loading.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -21,7 +20,7 @@
   <title>ABP Music</title>
 </head>
 
-<body class="flexbox-site" onload="detailTrack()">
+<body class="flexbox-site" onload="searchTrack()">
   <div id="loading" class="box">
     <div class="b b1"></div>
     <div class="b b2"></div>
@@ -50,31 +49,41 @@
     </li>
       </ul>
     </div>
-    <div class="content">
-      <div class="column"></div>
-      <div class="column">
-        <img id="cover" src="./assets/img/let-me-know.jpg" />
-        <h3 id="title">Let Me Know</h3>
-        <h4 id="duration">0:00</h4>
-        <a href="#" id="trackArtistURL"><h4 id="artist">No Wyld</h4></a>
-        <a href="#" id="trackAlbumURL"><h4 id="album">Ascension EP (2015)</h4></a>
-<br><br>
-        <div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=3135556" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="100%" data-height="90px"></div>
-        </div>
-        <div class="column"></div>
+    <h2 class="title">Tracks</h2>
+    <div class="content" id="content">
+
       </div>
+      <h2 class="title">Artists</h2>
+      <div class="content" id="contentArtists">
+      </div>
+      <h2 class="title">Albums</h2>
+      <div class="content" id="contentAlbums">
+      </div>
+      <h2 class="title">Radios</h2>
+      <div class="content" id="contentRadios">
+      </div>
+
   </main>
   <footer class="footer">
 
+    <div class="footer-rows">
+  <div>
     <ul class="navigation-footer">
       <li>Bautista Abella</li>
       <li>Nicolás Bilinkis</li>
       <li>Consuelo Perrone</li>
       <li><img src="assets/img/deezer.png" class="deezer" /></li>
     </ul>
+  </div>
+  <div>
+    <ul class="navigation-footer-social">
+      <li><a href="#"><i class="fab fa-facebook"></i>&nbsp;ABP Music</a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i>&nbsp;@ABPMusic</a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i>&nbsp;@ABPMusic</a></li>
 
-
-
+    </ul>
+  </div>
+  </div>
 <div id="dz-root"></div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>

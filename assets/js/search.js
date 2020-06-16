@@ -2,17 +2,163 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let name = urlParams.get('query');
 let datos;
+let datosArtists;
+let datosAlbums;
+let datosRadios;
+
+let content = document.querySelector("#content");
+let contentArtists = document.querySelector("#contentArtists");
+let contentAlbums = document.querySelector("#contentAlbums");
+let contentRadios = document.querySelector("#contentRadios");
+
 console.log(name);
-function detailTrack (){
+function searchTrack (){
 
   $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/track?q='+name, function (response){
     console.log(response);
     datos = response;
+searchArtist();
+});
+}
+function searchArtist (){
+
+  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q='+name, function (response){
+    console.log(response);
+    datosArtists = response;
+searchAlbums();
+});
+}
+function searchAlbums (){
+
+  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q='+name, function (response){
+    console.log(response);
+    datosAlbums = response;
+searchRadios();
+});
+}
+
+function searchRadios (){
+
+  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/radio?q='+name, function (response){
+    console.log(response);
+    datosRadios = response;
 detail()
 });
 }
 function detail(){
-  let duration = datos.data[0].duration;
+  if(datos.data.length>=9){
+  for(let i=0;i<=8;i++){
+
+    content.innerHTML+=`
+    <div class="column">
+    <a href="./detailTrack.html?id=${datos.data[i].id}">
+    <img id="cover" src="${datos.data[i].album.cover_xl}" />
+    <h3 id="title">${datos.data[i].title} - ${datos.data[i].artist.name}</h3>
+
+    </a>
+    </div>
+    `
+  }
+} else{
+  for(let i=0;i<datos.data.length;i++){
+
+    content.innerHTML+=`
+    <div class="column">
+    <a href="./detailTrack.html?id=${datos.data[i].id}">
+    <img id="cover" src="${datos.data[i].album.cover_xl}" />
+    <h3 id="title">${datos.data[i].title} - ${datos.data[i].artist.name}</h3>
+    </a>
+    </div>
+    `
+  }
+}
+
+
+
+if(datosArtists.data.length>=9){
+  for(let i=0;i<=8;i++){
+
+    contentArtists.innerHTML+=`
+    <div class="column">
+    <a href="./detailArtist.html?id=${datosArtists.data[i].id}">
+    <img id="cover" src="${datosArtists.data[i].picture_xl}" />
+    <h3 id="title">${datosArtists.data[i].name}</h3>
+    </a>
+    </div>
+    `
+  }
+} else{
+  for(let i=0;i<datosArtists.data.length;i++){
+
+    contentArtists.innerHTML+=`
+    <div class="column">
+    <a href="./detailArtist.html?id=${datosArtists.data[i].id}">
+    <img id="cover" src="${datosArtists.data[i].picture_xl}" />
+    <h3 id="title">${datosArtists.data[i].name}</h3>
+    </a>
+    </div>
+    `
+  }
+}
+
+
+
+if(datosAlbums.data.length>=9){
+  for(let i=0;i<=8;i++){
+
+    contentAlbums.innerHTML+=`
+    <div class="column">
+    <a href="./detailAlbums.html?id=${datosAlbums.data[i].id}">
+    <img id="cover" src="${datosAlbums.data[i].cover_xl}" />
+    <h3 id="title">${datosAlbums.data[i].title} - ${datosAlbums.data[i].artist.name}</h3>
+    </a>
+    </div>
+    `
+  }
+} else{
+  for(let i=0;i<datosAlbums.data.length;i++){
+
+    contentAlbums.innerHTML+=`
+    <div class="column">
+    <a href="./detailAlbums.html?id=${datosAlbums.data[i].id}">
+    <img id="cover" src="${datosAlbums.data[i].cover_xl}" />
+    <h3 id="title">${datosAlbums.data[i].title} - ${datosAlbums.data[i].artist.name}</h3>
+    </a>
+    </div>
+    `
+  }
+}
+
+
+
+
+
+
+
+
+if(datosRadios.data.length>0){
+  for(let i=0;i<datosRadios.data.length;i++){
+
+    contentRadios.innerHTML+=`
+    <div class="column">
+    <a href="./detailAlbums.html?id=${datosRadios.data[i].id}">
+    <img id="cover" src="${datosRadios.data[i].picture_xl}" />
+    <h3 id="title">${datosRadios.data[i].title}</h3>
+    </a>
+    </div>
+    `
+  }
+} else{
+    contentRadios.innerHTML+=`
+    <div class="column"></div>
+    <div class="column">
+    <h2 id="title" style="color:white;">No results</h2>
+    </div
+    <div class="column"></div>
+    `
+  }
+
+  /*let duration = datos.data[0].duration;
   document.getElementById("cover").src = datos.data[0].album.cover_xl;
   document.getElementById("title").innerHTML = datos.data[0].title;
   document.getElementById("duration").innerHTML = duration + " seconds";
@@ -34,7 +180,7 @@ function detail(){
       el.height = w[i].getAttribute('data-height');
       w[i].appendChild(el);
     }
-  }());
+  }());*/
   genders();
 }
 function genders(){
