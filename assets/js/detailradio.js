@@ -8,30 +8,49 @@ let loading = document.getElementById("loading");
 console.log(id);
 
 function detailGenre (){
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio/'+id)
+.then(function(response){
+  return response.json();
+})
+.then(function (data){
+  datos = data;
+  detailTrack();
+})
+.catch(function(error){
+  console.log(error);
+})
 
-  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio/'+id, function (response){
-    console.log(response);
-    datos = response;
 
-});
-detailTrack();
+
 }
 
 function detailTrack(){
-  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio/'+id+'/tracks', function (response){
-    console.log(response);
-    datosTracks = response;
-genders();
-});
+  fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio/'+id+'/tracks')
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data){
+    datosTracks = data;
+    genders();
+  })
+  .catch(function(error){
+    console.log(error);
+  })
+
+
+
+
 }
 
 
 function genders(){
   var dropdown = document.getElementById('drop');
-  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre', {output:'json'}, function (response){
-    genders=response;
-    console.log(genders.data);
-
+  fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre')
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data){
+    genders = data;
     for(let i=0;i<genders.data.length;i++){
     //  console.log(genders.data[i].name);
     //  dropdown.innerHTML = "<a class='dropdown-item' href='./genre.html?id='+'>"+genders.data[i].name+"</a>"
@@ -46,12 +65,18 @@ dropdown.appendChild(tag);
 //tag.innerHTML = "class='dropdown-item' href='./genre.html?id='+'>"+genders.data[i].name+"</a>";
 
     }
+    radio();
+  })
+  .catch(function(error){
+    console.log(error);
+  })
 
 
 
-radio();
 
-});
+
+
+
 }
 
 
@@ -138,9 +163,12 @@ loading.style.display="none";
 }*/
 function radios(){
   var drop = document.getElementById('dropRadios');
-  $.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio', {output:'json',limit:15}, function (response){
-    radios=response;
-    console.log(radios.data);
+  fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio')
+  .then(function(response){
+    return response.json();
+  })
+  .then(function (data){
+    radios=data;
     for(let i=0;i<15;i++){
     //  console.log(genders.data[i].name);
     //  dropdown.innerHTML = "<a class='dropdown-item' href='./genre.html?id='+'>"+genders.data[i].name+"</a>"
@@ -155,11 +183,9 @@ drop.appendChild(tag);
 //tag.innerHTML = "class='dropdown-item' href='./genre.html?id='+'>"+genders.data[i].name+"</a>";
 
     }
-
-
-
-
-
-});
+  })
+  .catch(function(error){
+    console.log(error);
+  })
 }
 radios();
