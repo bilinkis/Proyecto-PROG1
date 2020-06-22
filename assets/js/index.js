@@ -129,7 +129,6 @@ carrousel();
   })
 }
 
-function
 function carrousel(){
   document.getElementById("carrousel1").src = datos.tracks.data[0].album.cover_xl;
   document.getElementById("carrousel2").src = datos.albums.data[0].cover_xl;
