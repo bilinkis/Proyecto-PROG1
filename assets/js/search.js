@@ -218,7 +218,6 @@ dropdown.appendChild(tag);
 //tag.innerHTML = "class='dropdown-item' href='./genre.html?id='+'>"+genders.data[i].name+"</a>";
 
     }
-    radios();
   })
   .catch(function(error){
     console.log(error);
