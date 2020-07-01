@@ -41,7 +41,7 @@ function searchAlbums (){
     return response.json();
   })
   .then(function(data){
-    datosAlbums = response;
+    datosAlbums = data;
 searchRadios();
   })
 }
@@ -53,7 +53,7 @@ function searchRadios (){
     return response.json();
   })
   .then(function(data){
-    datosRadios = response;
+    datosRadios = data;
 detail()
   })
 
