@@ -30,7 +30,7 @@ function searchArtist (){
     return response.json();
   })
   .then(function(data){
-    datosArtists = response;
+    datosArtists = data;
 searchAlbums();
   })
 }
