@@ -160,5 +160,5 @@ drop.appendChild(tag);
 
     }
   })
-
+}
 radios();
