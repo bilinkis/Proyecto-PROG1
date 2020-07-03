@@ -17,7 +17,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/'+id)
   datos = data;
   genreArtists();
 })
-
+}
 
 function genreArtists(){
   fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/'+id+'/artists')
@@ -28,7 +28,7 @@ function genreArtists(){
     datosArtists = data;
     genders();
   })
-
+}
 function genders(){
   var dropdown = document.getElementById('drop');
   fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre')
